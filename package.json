@@ -4,7 +4,8 @@
   "description": "Code for realizing DevOps using AWS Lambda",
   "private": true,
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "deploy:dev": "yarn run build && DEPLOY_STAGE=dev serverless deploy -v"
   },
   "repository": {
     "type": "git",
