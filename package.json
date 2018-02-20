@@ -4,6 +4,8 @@
   "description": "Code for realizing DevOps using AWS Lambda",
   "private": true,
   "scripts": {
+    "lint": "tslint --project tsconfig.json --config tslint.json 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+    "lint:fix": "tslint --project tsconfig.json --config tslint.json --fix 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
     "build": "tsc",
     "deploy:dev": "yarn run build && DEPLOY_STAGE=dev serverless deploy -v"
   },
